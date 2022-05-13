@@ -63,10 +63,10 @@ class GameFragment : Fragment() {
 
         }
 
-        viewModel.score.observe(this, Observer { newScore ->
+        viewModel.score.observe(viewLifecycleOwner, Observer { newScore ->
             binding.scoreText.text = newScore.toString()
         })
-        viewModel.word.observe(this, Observer { newWord ->
+        viewModel.word.observe(viewLifecycleOwner, Observer { newWord ->
             binding.wordText.text = newWord
         })
 
@@ -78,8 +78,9 @@ class GameFragment : Fragment() {
      * Called when the game is finished
      */
     private fun gameFinished() {
-        val action = GameFragmentDirections.actionGameToScore(viewModel.score.value?:0)
-        findNavController(this).navigate(action)
+//        val action = GameFragmentDirections.actionGameToScore(viewModel.score.value?:0)
+//        findNavController(this).navigate(action)
+
     }
 
 
