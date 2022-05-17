@@ -16,6 +16,7 @@
 
 package com.example.android.guesstheword.screens.game
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.format.DateUtils
 import android.util.Log
@@ -39,6 +40,7 @@ class GameFragment : Fragment() {
     private lateinit var viewModel: GameViewModel
 
     private lateinit var binding: GameFragmentBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
