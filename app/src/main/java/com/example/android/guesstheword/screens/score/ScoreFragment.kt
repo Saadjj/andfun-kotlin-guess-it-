@@ -51,7 +51,7 @@ class ScoreFragment : Fragment() {
             false
         )
 
-
+        binding.scoreViewModel=viewModel
 
         val scoreFragmentArgs by navArgs<ScoreFragmentArgs>()
 
@@ -63,8 +63,6 @@ class ScoreFragment : Fragment() {
         viewModel.score.observe(viewLifecycleOwner, Observer { newScore ->
             binding.scoreText.text = newScore.toString()
         })
-
-        binding.playAgainButton.setOnClickListener { viewModel.onPlayAgain() }
 
 
         // Navigates back to title when button is pressed
