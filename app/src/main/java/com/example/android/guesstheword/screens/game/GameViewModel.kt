@@ -81,7 +81,7 @@ class GameViewModel : ViewModel() {
             "snail",
             "soup",
             "calendar",
-            "sad",
+            "sadj",
             "desk",
             "guitar",
             "home",
